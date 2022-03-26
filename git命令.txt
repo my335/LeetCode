@@ -1,0 +1,4 @@
+git status 查看当前的变化(文件增删改)
+git add 添加要上传的文件、已删除的文件、改动的文件到本地仓库
+git commit -m "???" 为本次修改起个备注名
+git push origin main 上传到github
