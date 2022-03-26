@@ -1,0 +1,42 @@
+一、
+1、Integer是Int的包装类，int则是java的一种基本类型
+2、integer实际是对象的引用，当new一个integer时，实际上是生成了一个指针指向此对象而int则是直接存储数据值。
+3、integer的默认值是NULL，int是0；
+二、
+1、integer变量实际上是对一个integer对象的引用，所以两个通过new生成的integer变量是不相等的（内存地址不一样）
+2、integer变量和int变量比较时，只要两个变量的值相等，结果就位true（包装类integer和基本类型int比较时，java会自动拆包装为int，然后进行比较，实际上就变为两个int变量的比较）。
+3、new生成的integer变量，指向堆得新建对象，而非new生成的integer变量指向java常量池里，两者中的内存地址不一样。
+4、对于两个非new生成的integer对象，进行比较时，如果两个变量的值在区间-128到127之间，则为true，不在则为false。
+5、自动装箱integer.valueOf(),拆箱integer.intValue()。
+int c=0;
+while(true){
+   c++;
+  if(c<10){
+   System.out.print(c);
+}
+}
+他会输出无数的从0到10，因为当c到达最大值时，会再次从最小值出发。
+三、
+定义long整型时，需要在数字后面加L或者l；
+四、
+费马小定理：如果p是一个质数，而整数a不是p的倍数，则有
+a^（p-1）≡1（mod p）；（a^（p-1）-1）/p能除尽；
+五、Integer
+能实现int类型和String类型之间的相互转换。
+1、Integer（int number）
+该方法以一个int型变量作为参数来获取Integer对象
+ Integer number =new Integer（7）
+2、Integer（String str）
+该方法以一个String型变量作为参数来获取Integer对象
+Integer number=new Integer（“45”）“”里面只能是数字不能是其他
+3、Integer类的常用方法
+   byteValue（） 将该Integer转为byte类型，并返回byte类型
+   doubleValue（） 转为double，返回double类型
+    floatValue() 转换为float，返回float
+    intValue（）转换为int
+    longValue（）转换为long
+    parseInt（String s）将字符串转换为int型，返回static int
+    toString（）转换为字符串类型
+     valueOf（String s）将字符串转换为Integer型，返回static Integer。
+4、toBinaryString()、toHexString()和toOctalString()将值转换为二进制、十六进制和八进制
+5、MAX_VALUE：表示Int可取的最大值。
